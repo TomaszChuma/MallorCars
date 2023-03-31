@@ -1,0 +1,42 @@
+.modal {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(200, 200, 200, 0.838);
+  position: fixed;
+}
+
+.label {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal button {
+  margin-top: 20px;
+}
+
+.locationName {
+  margin-top: 20px;
+}
+
+.modal input {
+  margin-top: 20px;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}

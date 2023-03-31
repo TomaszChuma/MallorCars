@@ -1,0 +1,60 @@
+.timePicker {
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  overflow-y: scroll;
+  height: 238px;
+  position: absolute;
+  width: 540px;
+  z-index: 15;
+}
+
+.timePickerItem {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+
+
+.timePickerItem:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+  font-weight: bold;
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: #2098D1;
+  background-color: #ffc886;
+  color: rgb(0, 0, 0);
+}
+
+.timePicker::-webkit-scrollbar {
+  width: 14px;
+}
+
+.timePicker::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;}
+
+.timePicker::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fbb662;
+}

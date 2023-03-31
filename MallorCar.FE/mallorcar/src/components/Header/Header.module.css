@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+.header {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerContent {
+  width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: white;
+}
+
+.title {
+  color: white;
+  font-size: 40px;
+  font-family: 'TESLA';
+  display: inline-block;
+}
+
+.label {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 14px;
+  color: white;
+}
+
+.currency{
+  display: inline-block;
+  color: white;
+}
+
+.sign {
+  display: inline-block;
+  margin-left: 30px;
+  color: white;
+}

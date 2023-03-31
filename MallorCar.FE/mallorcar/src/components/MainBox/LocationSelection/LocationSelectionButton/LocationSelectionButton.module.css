@@ -1,0 +1,9 @@
+.naviMarker {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+.dropdownButton {
+  display: flex;
+}

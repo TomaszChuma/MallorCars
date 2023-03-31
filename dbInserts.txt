@@ -1,0 +1,17 @@
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('a495611d-9a7a-48c0-9776-1f8bd92ba7d9', 'X', null, 50, 560, 7, 3.8, 249, 'xnormal');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('8a11c1c2-2050-44f5-bfe2-856ce7810e86', 'S', 'Plaid', 20, 637, 5, 2, 322, 'splaid');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('4a03fd43-6c9f-4fb9-ba53-d09beb52c9fa', 'Y', 'Performance', 80, 488, 5, 3.5, 249, 'yperf');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('d2c6aac2-03ed-4af6-b5c7-34a47ad5b048', 'X', 'Plaid', 69, 536, 6, 2.5, 262, 'xplaid');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('aae9a33e-f407-4d30-abd5-d1fdf9a2cc59', 'Y', 'Long Range', 66, 531, 7, 4.8, 217, 'ylong');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('6ab8242c-395d-4a55-95c7-ab1acabb26a4', 'S', null, 14, 651, 5, 3.1, 240, 'snormal');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('c720d513-4d1a-45e7-9a7a-b6f562768f0b', '3', 'Performance', 56, 507, 5, 3.1, 261, '3performance');
+INSERT INTO public."Model" ("ModelId", "ModelName", "ModelSubName", "ModelBaseDailyPrice", "ModelRange", "ModelNumOfSeats", "ModelAcceleration", "ModelTopSpeed", "ModelPhotoUrl") VALUES ('06b2e583-3225-4ef2-92f7-ff1fb957405b', '3', 'RW Drive', 52, 438, 5, 5.8, 225, '3rear');
+
+INSERT INTO public."Locations" ("LocationId", "LocationName") VALUES ('e2858625-1c59-4144-9337-aa5855675027', 'Palma City Center');
+INSERT INTO public."Locations" ("LocationId", "LocationName") VALUES ('ae34c296-26ab-4b14-b5c4-6b952fda024a', 'Palma Airport');
+INSERT INTO public."Locations" ("LocationId", "LocationName") VALUES ('4adf23c4-981a-4764-9be5-84794f683de0', 'Alcudia');
+INSERT INTO public."Locations" ("LocationId", "LocationName") VALUES ('d2c4813f-4cfe-4d79-8f88-9ceec20a9b7a', 'Manacor');
+
+INSERT INTO public."Clients" ("ClientId", "ClientFirstName", "ClientLastName", "ClientEmail", "ClientPhoneNumber") VALUES ('d7313719-e5c1-4bd4-b163-f79f13cccfa4', 'Tomasz', 'Chuma', 'tomaszchuma@gmail.com', '+48881441146');
+
+

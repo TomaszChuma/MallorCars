@@ -1,0 +1,16 @@
+@media (min-width: 1200px) {
+  .carList { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1800px) {
+  .carList { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 2400px) {
+  .carList { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+
+.carList {
+  display: grid;
+}
