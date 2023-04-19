@@ -10,15 +10,3 @@ C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.Domain\obj\Debug\net6.0\M
 C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.Domain\obj\Debug\net6.0\refint\MallorCar.Domain.dll
 C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.pdb
 C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.Domain\obj\Debug\net6.0\ref\MallorCar.Domain.dll
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\bin\Debug\net6.0\MallorCar.Domain.deps.json
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\bin\Debug\net6.0\MallorCar.Domain.dll
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\bin\Debug\net6.0\MallorCar.Domain.pdb
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.csproj.AssemblyReference.cache
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.AssemblyInfoInputs.cache
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.AssemblyInfo.cs
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.dll
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\refint\MallorCar.Domain.dll
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\MallorCar.Domain.pdb
-C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Domain\obj\Debug\net6.0\ref\MallorCar.Domain.dll
