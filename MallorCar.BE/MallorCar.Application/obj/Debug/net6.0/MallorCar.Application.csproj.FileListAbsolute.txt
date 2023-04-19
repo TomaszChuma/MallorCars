@@ -1,0 +1,15 @@
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\bin\Debug\net6.0\MallorCar.Application.deps.json
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\bin\Debug\net6.0\MallorCar.Application.dll
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\bin\Debug\net6.0\MallorCar.Application.pdb
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\bin\Debug\net6.0\MallorCar.Domain.dll
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\bin\Debug\net6.0\MallorCar.Domain.pdb
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.csproj.AssemblyReference.cache
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.AssemblyInfoInputs.cache
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.AssemblyInfo.cs
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.csproj.CoreCompileInputs.cache
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.csproj.CopyComplete
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.dll
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\refint\MallorCar.Application.dll
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\MallorCar.Application.pdb
+C:\Users\Tomi i Miki\RiderProjects\MallorCar\MallorCar.BE\MallorCar.Application\obj\Debug\net6.0\ref\MallorCar.Application.dll

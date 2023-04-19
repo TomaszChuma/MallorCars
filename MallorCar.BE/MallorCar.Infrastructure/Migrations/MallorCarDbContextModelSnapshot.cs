@@ -67,6 +67,16 @@ namespace MallorCar.Infrastructure.Migrations
                     b.HasKey("ClientId");
 
                     b.ToTable("Clients");
+
+                    b.HasData(
+                        new
+                        {
+                            ClientId = new Guid("d7313719-e5c1-4bd4-b163-f79f13cccfa4"),
+                            ClientEmail = "tomaszchuma18@gmail.com",
+                            ClientFirstName = "Tomasz",
+                            ClientLastName = "Chuma",
+                            ClientPhoneNumber = "+48881441146"
+                        });
                 });
 
             modelBuilder.Entity("MallorCar.Domain.Entities.Location", b =>
@@ -82,6 +92,28 @@ namespace MallorCar.Infrastructure.Migrations
                     b.HasKey("LocationId");
 
                     b.ToTable("Locations");
+
+                    b.HasData(
+                        new
+                        {
+                            LocationId = new Guid("e2858625-1c59-4144-9337-aa5855675027"),
+                            LocationName = "Palma City Center"
+                        },
+                        new
+                        {
+                            LocationId = new Guid("ae34c296-26ab-4b14-b5c4-6b952fda024a"),
+                            LocationName = "Palma Airport"
+                        },
+                        new
+                        {
+                            LocationId = new Guid("4adf23c4-981a-4764-9be5-84794f683de0"),
+                            LocationName = "Alcudia"
+                        },
+                        new
+                        {
+                            LocationId = new Guid("d2c4813f-4cfe-4d79-8f88-9ceec20a9b7a"),
+                            LocationName = "Manacor"
+                        });
                 });
 
             modelBuilder.Entity("MallorCar.Domain.Entities.Model", b =>
@@ -119,6 +151,102 @@ namespace MallorCar.Infrastructure.Migrations
                     b.HasKey("ModelId");
 
                     b.ToTable("Model");
+
+                    b.HasData(
+                        new
+                        {
+                            ModelId = new Guid("a495611d-9a7a-48c0-9776-1f8bd92ba7d9"),
+                            ModelAcceleration = 3.7999999999999998,
+                            ModelBaseDailyPrice = 50m,
+                            ModelName = "X",
+                            ModelNumOfSeats = 7,
+                            ModelPhotoUrl = "xnormal",
+                            ModelRange = 560,
+                            ModelTopSpeed = 249.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("8a11c1c2-2050-44f5-bfe2-856ce7810e86"),
+                            ModelAcceleration = 2.0,
+                            ModelBaseDailyPrice = 20m,
+                            ModelName = "S",
+                            ModelNumOfSeats = 5,
+                            ModelPhotoUrl = "splaid",
+                            ModelRange = 637,
+                            ModelSubName = "PLaid",
+                            ModelTopSpeed = 322.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("4a03fd43-6c9f-4fb9-ba53-d09beb52c9fa"),
+                            ModelAcceleration = 3.5,
+                            ModelBaseDailyPrice = 80m,
+                            ModelName = "Y",
+                            ModelNumOfSeats = 5,
+                            ModelPhotoUrl = "yperf",
+                            ModelRange = 488,
+                            ModelSubName = "Performance",
+                            ModelTopSpeed = 249.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("aae9a33e-f407-4d30-abd5-d1fdf9a2cc59"),
+                            ModelAcceleration = 4.7999999999999998,
+                            ModelBaseDailyPrice = 66m,
+                            ModelName = "Y",
+                            ModelNumOfSeats = 7,
+                            ModelPhotoUrl = "ylong",
+                            ModelRange = 531,
+                            ModelSubName = "Long Range",
+                            ModelTopSpeed = 217.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("d2c6aac2-03ed-4af6-b5c7-34a47ad5b048"),
+                            ModelAcceleration = 2.5,
+                            ModelBaseDailyPrice = 69m,
+                            ModelName = "X",
+                            ModelNumOfSeats = 6,
+                            ModelPhotoUrl = "xplaid",
+                            ModelRange = 536,
+                            ModelSubName = "Plaid",
+                            ModelTopSpeed = 262.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("6ab8242c-395d-4a55-95c7-ab1acabb26a4"),
+                            ModelAcceleration = 3.1000000000000001,
+                            ModelBaseDailyPrice = 14m,
+                            ModelName = "S",
+                            ModelNumOfSeats = 5,
+                            ModelPhotoUrl = "snormal",
+                            ModelRange = 651,
+                            ModelTopSpeed = 240.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("c720d513-4d1a-45e7-9a7a-b6f562768f0b"),
+                            ModelAcceleration = 3.1000000000000001,
+                            ModelBaseDailyPrice = 56m,
+                            ModelName = "3",
+                            ModelNumOfSeats = 5,
+                            ModelPhotoUrl = "3performance",
+                            ModelRange = 507,
+                            ModelSubName = "Performance",
+                            ModelTopSpeed = 261.0
+                        },
+                        new
+                        {
+                            ModelId = new Guid("06b2e583-3225-4ef2-92f7-ff1fb957405b"),
+                            ModelAcceleration = 5.7999999999999998,
+                            ModelBaseDailyPrice = 52m,
+                            ModelName = "3",
+                            ModelNumOfSeats = 5,
+                            ModelPhotoUrl = "3rear",
+                            ModelRange = 438,
+                            ModelSubName = "RW Drive",
+                            ModelTopSpeed = 225.0
+                        });
                 });
 
             modelBuilder.Entity("MallorCar.Domain.Entities.Rental", b =>
