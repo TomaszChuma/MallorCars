@@ -20,13 +20,15 @@ public class ClientController : ControllerBase
     public async Task<ActionResult<Guid>> CreateClient(
         [FromBody] CreateClientRequest request, CancellationToken cancellationToken)
     {
+        var command = await _mediator.Send(new CreateClientCommand
+        {
+            ClientFirstName = request.ClientFirstName,
+            ClientLastName = request.ClientLastName,
+            ClientEmail = request.ClientEmail,
+            ClientPhoneNumber = request.ClientPhoneNumber
+        }, cancellationToken);
+        
         return StatusCode(
-            StatusCodes.Status201Created, await _mediator.Send(new CreateClientCommand
-            {
-                ClientFirstName = request.ClientFirstName,
-                ClientLastName = request.ClientLastName,
-                ClientEmail = request.ClientEmail,
-                ClientPhoneNumber = request.ClientPhoneNumber
-            }, cancellationToken));
+            StatusCodes.Status201Created, command);
     }
 }

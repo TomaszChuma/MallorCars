@@ -21,7 +21,7 @@ public class UpdateModelDailyBasePriceCommandHandler : IRequestHandler<UpdateMod
     {
         var model = await _modelRepository.FindAsync(x => x.ModelId == request.ModelId, cancellationToken);
 
-        model.ModelBaseDailyPrice = request.ModelDailyBasePrice;
+        if (model != null) model.ModelBaseDailyPrice = request.ModelDailyBasePrice;
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
     }

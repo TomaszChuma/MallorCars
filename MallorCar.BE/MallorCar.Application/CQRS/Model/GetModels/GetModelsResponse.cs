@@ -6,7 +6,7 @@ public class GetModelsResponse
 
     public string ModelName { get; set; } = default!;
 
-    public string ModelSubName { get; set; } = default!;
+    public string? ModelSubName { get; set; }
     
     public decimal ModelDailyPrice { get; set; }
 

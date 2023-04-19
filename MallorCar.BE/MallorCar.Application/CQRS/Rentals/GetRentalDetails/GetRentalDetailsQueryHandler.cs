@@ -1,4 +1,3 @@
-using MallorCar.Domain.Entities;
 using MallorCarApplication.Common.Interfaces;
 using MediatR;
 
@@ -17,6 +16,12 @@ public class GetRentalDetailsQueryHandler : IRequestHandler<GetRentalDetailsQuer
     {
         var rental = await _rentalRepository.GetRentalDetailsByRentalCode(request.RentalCode);
 
+        if (rental is null)
+        {
+            throw new Exception("Cannot find rental of given code");
+        }
+
+        
         return new GetRentalDetailsResponse
         {
             RentalStartLocationName = rental.RentalStartLocation.LocationName,

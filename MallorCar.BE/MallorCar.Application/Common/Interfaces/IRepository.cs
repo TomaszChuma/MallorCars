@@ -4,7 +4,7 @@ namespace MallorCarApplication.Common.Interfaces;
 
 public interface IRepository<T>
 {
-    Task<T> FindAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = new());
+    Task<T?> FindAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = new());
 
     Task<T> GetSingleWithIncludesAsync(
         Expression<Func<T, bool>> filter,

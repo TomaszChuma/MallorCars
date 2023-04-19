@@ -3,7 +3,7 @@ using MallorCarApplication.CQRS.Locations.GetLocationAvailableCars;
 
 namespace MallorCarApplication.Common.Interfaces;
 
-public interface IRentalRepository : IRepository<MallorCar.Domain.Entities.Rental>
+public interface IRentalRepository : IRepository<Rental>
 {
     Task<IEnumerable<GetLocationAvailableCarsResponse>> GetAvailableCars(Guid locationId, DateTime rentalStartDate, DateTime rentalEndDate);
     
@@ -11,5 +11,5 @@ public interface IRentalRepository : IRepository<MallorCar.Domain.Entities.Renta
 
     Task<Rental> GetRentalDetails(Guid rentalId);
 
-    Task<Rental> GetRentalDetailsByRentalCode(string rentalCode);
+    Task<Rental?> GetRentalDetailsByRentalCode(string rentalCode);
 }

@@ -7,7 +7,7 @@ namespace MallorCar.Infrastructure.Persistence;
 
 public class MallorCarDbContext : DbContext, IUnitOfWork
 {
-    private readonly IMediator _mediator;
+    private readonly IMediator? _mediator;
     public MallorCarDbContext(DbContextOptions<MallorCarDbContext> options) : base(options)
     {
     }
@@ -19,17 +19,17 @@ public class MallorCarDbContext : DbContext, IUnitOfWork
         _mediator = mediator;
     }
 
-    public DbSet<Car> Cars { get; set; }
-    public DbSet<Client> Clients { get; set; }
-    public DbSet<Location> Locations { get; set; }
-    public DbSet<Rental> Rentals { get; set; }
+    public DbSet<Car> Cars { get; set; } = default!;
+    public DbSet<Client> Clients { get; set; } = default!;
+    public DbSet<Location> Locations { get; set; } = default!;
+    public DbSet<Rental> Rentals { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
     }
 
-    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
         return await base.SaveChangesAsync(cancellationToken);
     }
@@ -38,7 +38,7 @@ public class MallorCarDbContext : DbContext, IUnitOfWork
         CancellationToken cancellationToken = new())
     {
         await base.SaveChangesAsync(cancellationToken);
-        await _mediator.Publish(notification, cancellationToken);
+        await _mediator!.Publish(notification, cancellationToken);
         return await base.SaveChangesAsync(cancellationToken);
     }
 }

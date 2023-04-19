@@ -22,11 +22,13 @@ public class RentalController : ControllerBase
         [FromQuery] GetRentalDetailsRequest request,
         CancellationToken cancellationToken)
     {
+        var query = await _mediator.Send(new GetRentalDetailsQuery
+        {
+            RentalCode = request.RentalCode
+        }, cancellationToken);
+        
         return StatusCode(
-            StatusCodes.Status200OK, await _mediator.Send(new GetRentalDetailsQuery
-            {
-                RentalCode = request.RentalCode
-            }, cancellationToken));
+            StatusCodes.Status200OK, query);
     }
     
 
@@ -35,15 +37,18 @@ public class RentalController : ControllerBase
         [FromBody] CreateRentalRequest request,
         CancellationToken cancellationToken)
     {
+        var command = await _mediator.Send(new CreateRentalCommand
+        {
+            ModelId = request.ModelId,
+            RentalStartLocationId = request.RentalStartLocationId,
+            RentalEndLocationId = request.RentalEndLocationId,
+            RentalStartDate = request.RentalStartDate,
+            RentalEndDate = request.RentalEndDate,
+            ClientId = request.ClientId
+        }, cancellationToken);
+        
+        
         return StatusCode(
-            StatusCodes.Status201Created, await _mediator.Send(new CreateRentalCommand
-            {
-                ModelId = request.ModelId,
-                RentalStartLocationId = request.RentalStartLocationId,
-                RentalEndLocationId = request.RentalEndLocationId,
-                RentalStartDate = request.RentalStartDate,
-                RentalEndDate = request.RentalEndDate,
-                ClientId = request.ClientId
-            }, cancellationToken));
+            StatusCodes.Status201Created, command);
     }
 }

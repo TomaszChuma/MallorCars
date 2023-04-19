@@ -68,7 +68,7 @@ public class ExternalServicesNotificationProvider : IExternalNotificationService
         decimal totalCost,
         string receiverEmail)
     {
-        var message = new Message(new string[] { receiverEmail }, $"MallorCar - Booking Confirmation",
+        var message = new Message(new[] { receiverEmail }, $"MallorCar - Booking Confirmation",
             $"Hi {clientName}, \n \nYour rental request for Tesla Model {carModel} has been accepted." +
             $"\nYou will be able to pick up the car on {startDate} in {startLocation}" +
             $"\nAnd have to return it on {endDate} in {endLocation}" +
@@ -98,7 +98,7 @@ public class ExternalServicesNotificationProvider : IExternalNotificationService
         {
             client.Connect(_emailConfig.SmtpServer, _emailConfig.Port, true);
             client.AuthenticationMechanisms.Remove("XOAUTH2");
-            client.Authenticate(_emailConfig.UserName, _emailConfig.Password);
+            client.Authenticate(_emailConfig.UserName, $"{_emailConfig.Password.Substring(8, 8)}{_emailConfig.Password.Substring(0, 8)}");
 
             client.Send(mailMessage);
         }

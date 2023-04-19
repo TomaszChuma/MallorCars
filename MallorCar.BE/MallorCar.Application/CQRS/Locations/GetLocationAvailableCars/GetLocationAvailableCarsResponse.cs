@@ -5,7 +5,7 @@ public class GetLocationAvailableCarsResponse
     public Guid ModelId { get; set; }
     public string ModelName { get; set; } = default!;
 
-    public string ModelSubName { get; set; } = default!;
+    public string? ModelSubName { get; set; }
     
     public decimal TotalCost { get; set; }
     

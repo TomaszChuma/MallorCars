@@ -1,4 +1,3 @@
-using MallorCar.Domain.Entities;
 using MallorCarApplication.Common.Interfaces;
 using MediatR;
 

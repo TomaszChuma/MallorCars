@@ -21,8 +21,10 @@ public class ModelController : ControllerBase
     public async Task<ActionResult<IEnumerable<GetModelsResponse>>> GetModels(
         CancellationToken cancellationToken)
     {
+        var query = await _mediator.Send(new GetModelsQuery(), cancellationToken);
+        
         return StatusCode(
-            StatusCodes.Status200OK, await _mediator.Send(new GetModelsQuery(), cancellationToken));
+            StatusCodes.Status200OK, query);
     }
     
     [HttpPatch]

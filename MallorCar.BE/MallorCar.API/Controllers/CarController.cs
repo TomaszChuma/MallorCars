@@ -20,13 +20,15 @@ public class CarController : ControllerBase
         [FromBody] CreateCarRequest request,
         CancellationToken cancellationToken)
     {
+        var command = await _mediator.Send(new CreateCarCommand
+        {
+            ModelId = request.ModelId,
+            CarRegNumber = request.CarRegNumber,
+            LocationId = request.LocationId
+        }, cancellationToken);
+        
         return StatusCode(
-            StatusCodes.Status201Created, await _mediator.Send(new CreateCarCommand
-            {
-                ModelId = request.ModelId,
-                CarRegNumber = request.CarRegNumber,
-                LocationId = request.LocationId
-            }, cancellationToken));
+            StatusCodes.Status201Created, command);
     }
     
 }

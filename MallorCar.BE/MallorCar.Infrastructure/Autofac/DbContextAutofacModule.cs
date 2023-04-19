@@ -9,7 +9,7 @@ namespace MallorCar.Infrastructure.Autofac;
 
 public class DbContextAutofacModule : Module
 {
-    private readonly string _connectionString;
+    private readonly string? _connectionString;
 
     public DbContextAutofacModule(string? connectionString)
     {

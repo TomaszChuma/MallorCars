@@ -20,8 +20,10 @@ public class LocationController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<GetLocationsResponse>>> GetLocations(CancellationToken cancellationToken)
     {
+        var query = await _mediator.Send(new GetLocationsQuery(), cancellationToken);
+        
         return StatusCode(
-            StatusCodes.Status200OK, await _mediator.Send(new GetLocationsQuery(), cancellationToken));
+            StatusCodes.Status200OK, query);
     }
 
     [HttpGet("locationId/rentals/dateRange/availableCars")] // TODO think about api path
@@ -29,12 +31,14 @@ public class LocationController : ControllerBase
         [FromQuery] GetLocationAvailableCarsRequest request,
         CancellationToken cancellationToken)
     {
+        var query = await _mediator.Send(new GetLocationAvailableCarsQuery
+        {
+            LocationId = request.LocationId,
+            RentalStartDate = request.RentalStartDate,
+            RentalEndDate = request.RentalEndDate
+        }, cancellationToken);
+        
         return StatusCode(
-            StatusCodes.Status200OK, await _mediator.Send(new GetLocationAvailableCarsQuery
-            {
-                LocationId = request.LocationId,
-                RentalStartDate = request.RentalStartDate,
-                RentalEndDate = request.RentalEndDate
-            }, cancellationToken));
+            StatusCodes.Status200OK, query);
     }
 }

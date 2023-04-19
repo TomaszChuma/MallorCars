@@ -2,7 +2,7 @@ namespace MallorCarApplication.CQRS.Rentals.GetRentalDetails;
 
 public class GetRentalDetailsResponse
 {
-    public string RentalStartLocationName { get; set; } = default!;
+    public string? RentalStartLocationName { get; set; }
     
     public string RentalEndLocationName { get; set; } = default!;
 
@@ -12,7 +12,7 @@ public class GetRentalDetailsResponse
 
     public string RentalCarModelName { get; set; } = default!;
     
-    public string RentalCarModelSubName { get; set; } = default!;
+    public string? RentalCarModelSubName { get; set; }
 
     public string RentalCarPhotoUrl { get; set; } = default!;
 }

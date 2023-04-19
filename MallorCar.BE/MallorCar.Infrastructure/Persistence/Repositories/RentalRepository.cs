@@ -1,5 +1,3 @@
-using System.Diagnostics.Tracing;
-using System.Linq.Expressions;
 using MallorCar.Domain.Entities;
 using MallorCarApplication.Common.Helpers;
 using MallorCarApplication.Common.Interfaces;
@@ -10,18 +8,16 @@ namespace MallorCar.Infrastructure.Persistence.Repositories;
 
 public class RentalRepository : Repository<Rental>, IRentalRepository
 {
-    private readonly DbContext _dbContext;
-    private DbSet<Rental> table = null;
+    private readonly DbSet<Rental> _table;
     
     public RentalRepository(DbContext dbContext) : base(dbContext)
     {
-        _dbContext = dbContext;
-        table = _dbContext.Set<Rental>();
+        _table = dbContext.Set<Rental>();
     }
     
     public async Task<IEnumerable<GetLocationAvailableCarsResponse>> GetAvailableCars(Guid locationId, DateTime rentalStartDate, DateTime rentalEndDate)
     {
-        var allRentals = await table.Include(rental => rental.Car).ThenInclude(car => car.Model).ToListAsync();
+        var allRentals = await _table.Include(rental => rental.Car).ThenInclude(car => car.Model).ToListAsync();
 
         var availableCars = allRentals
             .Where(x => x.RentalEndLocationId == locationId && x.RentalEndDate < rentalStartDate)
@@ -70,7 +66,7 @@ public class RentalRepository : Repository<Rental>, IRentalRepository
 
     public async Task<Guid> GetSpecificCarForRent(Guid locationId, Guid modelId, DateTime rentalStartDate, DateTime rentalEndDate)
     {
-        var allRentals = await table.Include(rental => rental.Car).ThenInclude(car => car.Model).ToListAsync();
+        var allRentals = await _table.Include(rental => rental.Car).ThenInclude(car => car.Model).ToListAsync();
 
         var availableCars = allRentals
             .Where(x => x.RentalEndLocationId == locationId && x.RentalEndDate < rentalStartDate)
@@ -78,27 +74,27 @@ public class RentalRepository : Repository<Rental>, IRentalRepository
             .Where(x => !allRentals.Where(y => y.CarId == x.CarId).Any(z => z.RentalStartDate > x.RentalEndDate && z.RentalStartDate < rentalEndDate))
             .Where(x => !allRentals.Where(y => y.CarId == x.CarId).Any(z => z.RentalStartDate > rentalStartDate && z.RentalStartDate < rentalEndDate));
 
-        var specificCarForRent = availableCars.Where(x => x.Car.ModelId == modelId).First();
+        var specificCarForRent = availableCars.First(x => x.Car.ModelId == modelId);
 
         return specificCarForRent.CarId;
     }
 
     public async Task<Rental> GetRentalDetails(Guid rentalId)
     {
-        var include = table.Include(rental => rental.Car)
+        var include = _table.Include(rental => rental.Car)
             .ThenInclude(car => car.Model)
             .Include(rental => rental.Client)
             .Include(rental => rental.RentalStartLocation)
             .Include(rental => rental.RentalEndLocation);
 
-        var rental = await include.SingleOrDefaultAsync(x => x.RentalId == rentalId);
+        var rental = await include.SingleAsync(x => x.RentalId == rentalId);
 
         return rental;
     }
 
-    public async Task<Rental> GetRentalDetailsByRentalCode(string rentalCode)
+    public async Task<Rental?> GetRentalDetailsByRentalCode(string rentalCode)
     {
-        var include = table.Include(rental => rental.Car)
+        var include = _table.Include(rental => rental.Car)
             .ThenInclude(car => car.Model)
             .Include(rental => rental.RentalStartLocation)
             .Include(rental => rental.RentalEndLocation);
