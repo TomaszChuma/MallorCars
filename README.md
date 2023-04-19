@@ -29,9 +29,8 @@ W celu poprawnego uruchomienia projektu należy podjąć następujące kroki:
   dotnet ef database update -s MallorCar.API -p MallorCar.Infrastructure
 ```
 
-3. Uruchomić inserty do naszej bazy danych(plik dbInserts.txt)
-4. Uruchomić solucje
-5. W lokalizacji MallorCar/MallorCar.FE uruchomić komendę
+3. Uruchomić solucje
+4. W lokalizacji MallorCar/MallorCar.FE uruchomić komendę
 
 ```bash
   npm start
